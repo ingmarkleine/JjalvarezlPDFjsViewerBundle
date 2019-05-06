@@ -7,7 +7,7 @@
     "require": {
         "php": ">=7.2",
         "symfony/symfony": "^4.3@dev",
-        "symfony/dependency-injection": "^4.3@dev"
+        "symfony/flex": "^1.2@dev"
     },
     "autoload": {
         "psr-0": { "PDFjsViewerBundle" : "" }
