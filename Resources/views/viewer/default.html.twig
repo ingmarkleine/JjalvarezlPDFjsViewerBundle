@@ -29,20 +29,20 @@ See https://github.com/adobe-type-tools/cmap-resources
     <title>{% block titulo %} Prueba de pdf {% endblock %}</title>
 
 
-    <link rel="stylesheet" href="{{ asset('bundles/jjalvarezlpdfjsviewer/web/viewer.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/pdfjsviewer/web/viewer.css') }}">
 
-    <script src="{{ asset('bundles/jjalvarezlpdfjsviewer/web/compatibility.js') }}"></script>
+    <script src="{{ asset('bundles/pdfjsviewer/web/compatibility.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
     <!-- This snippet is used in production (included from viewer.html) -->
-    <link rel="resource" type="application/l10n" href="{{ asset ('bundles/jjalvarezlpdfjsviewer/web/locale/locale.properties') }}">
-    <script src="{{ asset('bundles/jjalvarezlpdfjsviewer/web/l10n.js') }}"></script>
-    <script src="{{ asset('bundles/jjalvarezlpdfjsviewer/build/pdf.js') }}"></script>
+    <link rel="resource" type="application/l10n" href="{{ asset ('bundles/pdfjsviewer/web/locale/locale.properties') }}">
+    <script src="{{ asset('bundles/pdfjsviewer/web/l10n.js') }}"></script>
+    <script src="{{ asset('bundles/pdfjsviewer/build/pdf.js') }}"></script>
 
 
 
-    <script src="{{ asset('bundles/jjalvarezlpdfjsviewer/web/viewer.js') }}"></script>
+    <script src="{{ asset('bundles/pdfjsviewer/web/viewer.js') }}"></script>
 
     {% if deletePdfInTmpAfterRenderized is defined and deletePdfInTmpAfterRenderized == true %}
         <script>
@@ -54,7 +54,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     {% if pdf is defined and tmpPdfDirectory is defined %}
                         data: { "PdfTmpPath": '{{ tmpPdfDirectory }}{{ pdf }}' },
                     {% elseif pdf is defined %}
-                        data: { "PdfTmpPath": '/bundles/jjalvarezlpdfjsviewer/tmpPdf/{{ pdf }}' },
+                        data: { "PdfTmpPath": '/bundles/pdfjsviewer/tmpPdf/{{ pdf }}' },
                     {% else %}
                         data: { "PdfTmpPath": '' },
                     {% endif %}
@@ -80,7 +80,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         </script>
     {% elseif pdf is defined %}
         <script>
-            DEFAULT_URL = '/bundles/jjalvarezlpdfjsviewer/tmpPdf/{{ pdf }}';
+            DEFAULT_URL = '/bundles/pdfjsviewer/tmpPdf/{{ pdf }}';
         </script>
     {% endif %}
 

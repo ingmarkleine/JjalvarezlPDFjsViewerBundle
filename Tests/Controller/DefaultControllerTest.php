@@ -1,6 +1,6 @@
 <?php
 
-namespace jjalvarezl\PDFjsViewerBundle\Tests\Controller;
+namespace PDFjsViewerBundle\Tests\Controller;
 
 use Salva\PdfJsBundle\Controller\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;

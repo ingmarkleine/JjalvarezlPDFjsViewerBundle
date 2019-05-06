@@ -1,6 +1,6 @@
 <?php
 
-namespace jjalvarezl\PDFjsViewerBundle\DependencyInjection;
+namespace PDFjsViewerBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('jjalvarezl_pd_fjs_viewer');
+        $rootNode = $treeBuilder->root('pdf_js_viewer');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
